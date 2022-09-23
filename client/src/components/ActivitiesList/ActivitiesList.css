@@ -1,0 +1,63 @@
+.activityListContainer {
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../Imagenes/mundoo.jpg');
+    min-height:100%;
+    width: 100%;
+    position: absolute ;
+    padding-bottom: 5rem;
+    background-attachment: fixed;
+    
+  }
+  
+  .activityCardListContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0 2rem 0;
+    
+  }
+
+  .pp {
+    color: azure;
+    font-size: 40px;
+    background-color: rgb(97, 36, 0);
+    border: 2px solid red
+  }
+  
+  .activityCardList {
+    /* background-image:url('../../Imagenes/tiling.gif'); */
+    color: rgb(0, 0, 0);
+    border: solid 1px white;
+    display: flex;
+    width: 30%;
+    height: 16rem;
+    margin:20px;
+    background-color: rgba(128, 128, 128, 0.288)
+  }
+  
+  .h3Activity {
+    text-align: start;
+    margin: 30px;
+    color: azure;
+  
+  }
+  
+  .h2Activity {
+    text-align: center;
+    justify-content: center;
+    color: azure;
+  }
+  
+  .divActivityContainer {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .noActivities {
+    background-color: hsl(256, 87%, 12%);
+    width: 100%;
+    height: 100vh;
+    color: white;
+  }

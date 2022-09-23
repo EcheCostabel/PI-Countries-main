@@ -1,0 +1,143 @@
+.landingPage {
+    background-image: url("../../Imagenes/mundo.png");
+    background-size: cover;
+    background-position: center center;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: relative;
+
+}
+
+.landingTitle {
+    color: rgb(255, 255, 255);
+    margin-left: 550px;
+    margin-top: 250px;
+    font-size:70px;
+}
+
+/* CSS */
+.landingTitle {
+  background-color: #3DD1E7;
+  border: 0 solid #E5E7EB;
+  box-sizing: border-box;
+  color: #000000;
+  display: flex;
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: .75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  width: 100%;
+  max-width: 460px;
+  position: relative;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  height:10%
+}
+
+
+.landingTitle:after {
+  content: '';
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+
+@media (min-width: 768px) {
+  .landingTitle {
+    padding: .75rem 3rem;
+    font-size: 2.95rem;
+  }
+}
+
+
+.landingButton {
+    position: absolute;
+    top: 45%;
+    left: -210%;
+    margin: 0px;
+    border-radius: 17px;
+    border: 1px solid #000000;
+    padding: 20px 165px;
+    background-color: white;
+    cursor:pointer;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.exe{
+  background: #3DD1E7;
+  width: 90%;
+  font-size: 25px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+/* CSS */
+.landingButton {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  font-family:  Helvetica, sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.landingButton:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.landingButton:hover:after {
+  transform: translate(0, 0);
+}
+
+.landingButton:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.landingButton:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .landingButton {
+    padding: 0 40px;
+  }
+}

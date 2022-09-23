@@ -1,0 +1,47 @@
+.cardContainer {
+    /* background-image: url('../../Imagenes/mundo.png'); */
+    border: solid;
+    width: 17vw;
+    height: 17rem;
+    margin: 1px 0 2px 0;
+    display: flex;
+    font-size: large;
+    color: rgb(0, 0, 0);
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 16px;
+    background-color: rgba(128, 128, 128, 0.288);
+    text-decoration: none;
+    
+  }
+  .h3 {
+    color: azure;
+    text-decoration: none;
+  }
+  
+  .infoConteiner {
+  
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: flex-end;
+    height: 50%;
+    text-decoration: none;
+  }
+  
+  .cardImg {
+    width: 30%;
+  }
+  
+  .content {
+    margin: 1rem 0 0 0;
+    color: azure;
+    text-decoration: none;
+  }
+  
+  .buttonDelete {
+    background-color:black;
+    color: white;
+  }

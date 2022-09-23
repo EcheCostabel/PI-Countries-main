@@ -1,0 +1,150 @@
+.activityCardContainer {
+  display: flex;
+  background-image: url('../../Imagenes/mundoo.jpg');
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0 0;
+}
+
+
+
+.activityCard {
+  background-color: rgba(0, 0, 0, 0.89);
+  border-radius: 3px;
+  padding: 70px 100px;
+  color: white;
+}
+
+.titleCreateActivity {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 23px;
+  margin: -50px 0 80px 0;
+  display: block;
+  text-align: center;
+}
+
+.inputActivities {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.labelActivity {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.i {
+  border: 0;
+  border-bottom: 1px solid #555;
+  background: transparent;
+  width: 100%;
+  padding: 8px 0 5px 0;
+  font-size: 16px;
+  color: #fff;
+
+}
+
+.i:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #e74c3c;
+}
+
+.in {
+  border: 0;
+  border-bottom: 1px solid #555;
+  background: transparent;
+  width: 100%;
+  padding: 8px 0 5px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-left: -14%;
+}
+
+.in:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #e74c3c;
+}
+
+.btnActivity {
+  color: #fff;
+  background-color: #e74c3c;
+  outline: none;
+  border: 0;
+  color: #fff;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  margin-top: 50px;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+.i:focus~.labelActivity,
+.i:valid~.labelActivity {
+  top: -12px;
+  font-size: 12px;
+}
+
+.op {
+  background-color: black;
+}
+
+.textArea {
+  box-shadow: inset 1px 2px 6px 5px #1264ac;
+  /* background-image: url('https://www.gifsanimados.org/data/media/529/fondo-imagen-animada-0481.gif'); */
+  background-size: cover;
+  border-radius: 5px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 8rem;
+
+}
+
+.countrieAndButton {
+  background-color: black;
+  border: grey 3px solid;
+  width: 3.2rem;
+  height: 3rem;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.btnDelete {
+  color: white;
+  background-color: red;
+  width: 1rem;
+  height: 1rem;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 0 0 33px;
+  padding: 0 0 0 0;
+  border-radius: 10px;
+  border: 0 0 0 0;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.pOfCountry {
+  margin: 5px;
+}
+
+.e {
+  color: red;
+  font-size: small;
+}

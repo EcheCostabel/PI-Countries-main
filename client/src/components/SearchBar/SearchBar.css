@@ -1,0 +1,85 @@
+.formulario {
+    display: flex;
+    align-content: center;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .inCountry {
+    background-color: var(--search-box-bg, white);
+    border: 3px solid black;
+    border-radius: 15px;
+    color: var(--search-box-text);
+    font-family: inherit;
+    font-size: inherit;
+    height: 100%;
+    outline: none;
+    padding-inline-end: 44px;
+    padding-inline-start: 52px;
+    position: relative;
+    width: 50%;
+  }
+  .errors div{
+    height: 30px;
+    margin-left: 90px;
+    width: 30px;
+  }
+
+  .errors p{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: red;
+    text-align: right;
+    width: 170px;
+    border: 3px red solid;
+    border-radius: 10px;
+}
+  
+  .inBt {
+    background-color: rgb(255, 255, 255);
+    background-repeat: no-repeat;
+    background-size: 80% 80%;
+    border-radius: 10px;
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    border: 1px solid white;
+    margin-left: 6px;
+    cursor: pointer;
+  }
+  
+
+  
+  .inBt {
+    appearance: none;
+    background-color: #FAFBFC;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+    box-sizing: border-box;
+    color: #24292E;
+    cursor: pointer;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    padding: 6px ;
+    position: relative;
+    transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    word-wrap: break-word;
+  }
+  
+  .inBt:hover {
+    background-color: #F3F4F6;
+    text-decoration: none;
+    transition-duration: 0.1s;
+  }
+  
+ 

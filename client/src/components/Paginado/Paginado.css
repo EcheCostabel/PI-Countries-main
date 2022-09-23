@@ -1,0 +1,68 @@
+.paginadoContainer {
+    display: flex;
+    /* background-image: url('../../Imagenes/cosaspaises.gif'); */
+    justify-content: center;
+    align-items: center;
+    height: 1vh;
+    margin-top: 0px;
+  }
+  
+  .ul {
+    padding: 0 0 0 0;
+    /* background-image: url('../../Imagenes/cosaspaises.gif'); */
+    width: 70vw;
+    height: 100%;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .numeroPaginado {
+    background-color: #1313e7;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    margin: 0 2px 0 2px;
+    cursor: pointer;
+    width: 2vw;
+    border-radius: 10px;
+    height: 5vh;
+    color: #ffffff;
+    font-size: large;
+    margin-right: 1px;
+  }
+  
+  
+  /* CSS */
+  .numeroPaginado {
+    background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    height: 3rem;
+    padding: 0 1.6rem;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all .5s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .numeroPaginado:hover {
+    box-shadow: rgba(54, 48, 105, 0.5) 0 1px 30px;
+    transition-duration: .1s;
+  }
+  
+  @media (min-width: 768px) {
+    .numeroPaginado {
+      padding: 0 1.9rem;
+    }
+  }
