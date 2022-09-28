@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { getDetail, restartDetail, getCountries } from "../../Redux/actions/index.js";
+import { getDetail, restartDetail } from "../../Redux/actions/index.js";
 import Loading from "../Loading/Loading.jsx";
 // import NavBar from "../NavBar/NavBar";
 import './Detail.css'
@@ -54,13 +54,13 @@ export default function Detail(props) {
                 <div key={el}>
                   <Link className='linkDetail' to='/activities'>
                     <h2 className="h2">Actividad</h2>
-                  </Link>
                   <div className='obj3Detail'>
                     <h3>{el.name}</h3>
                     <h3>Dificultad: {el.difficulty}</h3>
                     <h3>Duracion: {el.duration}</h3>
                     <h3>Temporada: {el.season}</h3>
                   </div>
+                  </Link>
                 </div>
               )
             })}</div>

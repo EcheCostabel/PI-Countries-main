@@ -64,12 +64,9 @@ export default function ActivityCreate() {
   }
 
   function handleSelect(e) {
-    if (input.countryId.includes(e.target.value)) {
-      alert('Este pais ya existe')
-    } else {
       setInput({ ...input, countryId: [...input.countryId, e.target.value] });
-    }
   }
+  
 
   function handleSubmit(e) {
 

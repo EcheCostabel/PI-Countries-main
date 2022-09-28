@@ -4,7 +4,7 @@ const initialState = {
     countries: [],
     allCountries: [],
     activities: [],
-    detail: []
+    detail: [],
 }
 
 export default function rootReducer(state = initialState, action) {
@@ -14,7 +14,7 @@ export default function rootReducer(state = initialState, action) {
             return {
                 ...state,
                 countries: action.payload,
-                allCountries: action.payload
+                allCountries: action.payload,
             }
 
         case FILTER_BY_CONTINENT:
@@ -69,11 +69,11 @@ export default function rootReducer(state = initialState, action) {
             }
 
         case SEARCH_COUNTRIES:
-            const errorName = [{ id: 1, error: "El pais no existe" }]
-            const verificacionName = action.payload.length !== 0 ? action.payload : errorName
+            // const errorName = [{ id: 1, error: "El pais no existe" }]
+            // const verificacionName = action.payload.length !== 0 ? action.payload : errorName
             return {
                 ...state,
-                countries: verificacionName
+                countries: action.payload
             }
 
         case ORDER_BY_NAME:

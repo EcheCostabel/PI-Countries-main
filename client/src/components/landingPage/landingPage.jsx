@@ -7,7 +7,7 @@ export default function LandingPage(){
         <div className ="landingPage">
             <h1 className = 'landingTitle'>PI-COUNTRIES</h1>
             <Link to='/home'>
-                <button className='landingButton'>Inicio</button>
+                <button className='landingButton'>Ingresar</button>
             </Link>
             <div>
                 <p className="exe">Alumno: Exequiel Costabel</p>

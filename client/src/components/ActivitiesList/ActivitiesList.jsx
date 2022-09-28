@@ -1,11 +1,19 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect} from "react";
+import { useSelector, useDispatch } from "react-redux";
 import Activity from "../Activity/Activity.jsx";
 import NavBar from "../NavBar/NavBar.jsx";
+import { getActivities } from "../../Redux/actions/index.js";
+
 import "./ActivitiesList.css";
 
 export default function ActivitiesList() {
   const activities = useSelector((state) => state.activities);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getActivities())
+  })
+
   return (
     <div className="activityListContainer">
 

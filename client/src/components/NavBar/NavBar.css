@@ -34,10 +34,8 @@
 .navLink {
   appearance: button;
   background-color: #000;
-  /* background-image: none; */
   border: 3px solid rgb(247, 247, 247);
   border-radius: 4px;
-  /* box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px; */
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
@@ -59,23 +57,7 @@
   margin: 20px
 }
 
-/* .navLink:focus {
-  text-decoration: none;
-}
 
-.navLink:hover {
-  text-decoration: none;
-}
-
-.navLink:active {
-  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
-  outline: 0;
-}
-
-.navLink:not([disabled]):active {
-  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
-  transform: translate(2px, 2px);
-} */
 
 @media (min-width: 768px) {
   .navLink {

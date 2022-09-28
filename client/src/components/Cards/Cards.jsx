@@ -43,7 +43,7 @@ export default function Home() {
   const handleClick = (e) => {
     e.preventDefault();
     dispatch(getCountries())
-    setCurrentPage(currentPage)
+    setCurrentPage(1)
   }
 
 
@@ -120,7 +120,7 @@ export default function Home() {
       <div className='cardsBox'>
         {
           currentCountry.length !== 0 ?
-            currentCountry?.map((country) => {
+            currentCountry?.map((country) => {  
               return (
                 <div key={country.id}>
                   {country.error ? <div className="error"><Error /></div>:
@@ -149,6 +149,7 @@ export default function Home() {
         countriesPerPage={countriesPerPage}
         countries={countries.length}
         paginado={paginado}
+        currentPage={currentPage}
       />
     </div>
   );

@@ -27,7 +27,6 @@
   }
   
   .activityCardList {
-    /* background-image:url('../../Imagenes/tiling.gif'); */
     color: rgb(0, 0, 0);
     border: solid 1px white;
     display: flex;

@@ -9,7 +9,9 @@ export default function Home() {
       <div className = 'navBar'>
       <NavBar/>
      </div>
+     
      <div className = 'cards'>
+      
       <Cards/>
      </div>
     </div>

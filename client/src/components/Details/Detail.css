@@ -10,7 +10,7 @@
   align-content: stretch;
 }
 .h2 {
-  color: #000000;
+  color: azure; 
   border: 3px black solid;
 }
 .loading {
@@ -67,10 +67,10 @@
 }
 
 .activitiesDetail {
-  background-image: url('../../Imagenes/mundo.png');
+  background-image: url('../../Imagenes/mundo.jpg');
   width: 80%;
   margin: 2rem 0;
-  border: solid rgb(12, 12, 12);
+  border: solid azure;
   border-radius: 15px;
 }
 
@@ -86,4 +86,9 @@ label {
   padding-right: 10px;
   font-size: 1rem;
   color: rgb(253, 245, 245);
+}
+
+.linkDetail{
+  text-decoration: none;
+  color: azure;
 }
