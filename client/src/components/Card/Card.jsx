@@ -4,7 +4,7 @@ import './Card.css'
 
 
 
-export default function Card({name, flag, continent, capital, population}) {
+export default function Card({name, flag, continent, capital, population, area}) {
   return (
   <div className='cardContainer'>
       <h3 className="h3">{name}</h3>
@@ -13,6 +13,7 @@ export default function Card({name, flag, continent, capital, population}) {
       <h5 className='content'>Capital: {capital}</h5>
       <h5 className='content'>Continente: {continent}</h5>
       <h5 className='content'>Poblacion: {population}</h5>
+      <h5 className='content'>Area: {area}</h5>
       </div>
   
   </div>

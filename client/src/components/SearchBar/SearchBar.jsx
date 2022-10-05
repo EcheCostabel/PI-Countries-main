@@ -30,7 +30,6 @@ export default function SearchBar() {
 
     function onInputChange(e) {
 
-
         e.preventDefault();
         setErrors({ name: '' })
         setSearch(e.target.value)

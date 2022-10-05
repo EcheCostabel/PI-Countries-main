@@ -6,6 +6,7 @@ import { INVIERNO, VERANO, OTOÑO, PRIMAVERA } from "../../Redux/Const/Const.js"
 import NavBar from "../NavBar/NavBar";
 import "./ActivityCreate.css";
 
+
 function validate(input) {
   let errors = {};
   if (!input.name
@@ -34,8 +35,9 @@ export default function ActivityCreate() {
     name: "",
     duration: "",
     difficulty: "",
-    season: "",
+    season: '',
     countryId: [],
+    precio: ''
   });
 
   useEffect(() => {
@@ -43,10 +45,20 @@ export default function ActivityCreate() {
     dispatch(getCountries());
   }, [dispatch]);
 
+
+  function handleChangeInp(e) {
+    setInput({
+      ...input,
+      precio: [e.target.value]
+    })
+  }
+
+
   function handleChange(e) {
     setInput({
       ...input,
       [e.target.name]: e.target.value,
+
     });
     setErrors(
       validate({
@@ -64,9 +76,10 @@ export default function ActivityCreate() {
   }
 
   function handleSelect(e) {
-      setInput({ ...input, countryId: [...input.countryId, e.target.value] });
+    setInput({ ...input, countryId: [...input.countryId, e.target.value] });
   }
-  
+
+
 
   function handleSubmit(e) {
 
@@ -80,7 +93,7 @@ export default function ActivityCreate() {
       input.season === "" ||
       input.countryId.length === 0) {
       alert('Debe llenar los campos')
-      
+
       window.location.reload()
     }
     else if (noRepeat.length !== 0) {
@@ -95,6 +108,7 @@ export default function ActivityCreate() {
         difficulty: "",
         season: "",
         countryId: [],
+        precio:''
       });
       history.push("/home");
     }
@@ -184,6 +198,7 @@ export default function ActivityCreate() {
                 </div>
               ))}
             </div>
+           
             <div>
               <button className='btnActivity' type="submit">Crear Actividad</button>
             </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { getCountries, filterCountriesByContinent, filterCountriesByActivity, orderByName, orderByPopulation, getActivities } from "../../Redux/actions/index.js";
+import { getCountries, filterCountriesByContinent, filterCountriesByActivity, orderByName, orderByPopulation, getActivities, clearCountries  } from "../../Redux/actions/index.js";
 import { LESS_POPULATION, HIGHER_POPULATION, ALL, ALL_OF_AFRICA, AMERICA, ALL_OF_ANTARCTICA, ALL_OF_ASIA, ALL_OF_EUROPE, ALL_OF_OCEANIA, ASCENDENTE, DESCENDENTE } from "../../Redux/Const/Const.js";
 import Card from "../Card/Card";
 import Paginado from "../Paginado/Paginado"
@@ -28,6 +28,7 @@ export default function Home() {
 
 
   useEffect(() => {
+    dispatch(clearCountries())
     dispatch(getCountries());
     dispatch(getActivities());
   }, [dispatch]);
@@ -42,6 +43,7 @@ export default function Home() {
 
   const handleClick = (e) => {
     e.preventDefault();
+    dispatch(clearCountries())
     dispatch(getCountries())
     setCurrentPage(1)
   }
@@ -66,11 +68,7 @@ export default function Home() {
     setCurrentPage(1);
     setOrden(`Ordenado ${e.target.value}`);
   }
-
  
-  
-
-
 
 
   return (
@@ -122,8 +120,7 @@ export default function Home() {
           currentCountry.length !== 0 ?
             currentCountry?.map((country) => {  
               return (
-                <div key={country.id}>
-                  {country.error ? <div className="error"><Error /></div>:
+                <div key={country.id}>        
                   <Link to={"/home/" + country.id}>
                     <Card
                       name={country.name}
@@ -131,17 +128,15 @@ export default function Home() {
                       continent={country.continent}
                       capital={country.capital}
                       population={country.population}
+                      
                     />
-                  </Link>}
+                  </Link>
                 </div>
               )
             })
             : 
             <Loading />
-            // <div className='loading'>
-            //   <label > CARGANDO .. </label>
-            //   <progress id="file" max="100" value="70"> 70% </progress>
-            // </div>
+           
         }
 
       </div>

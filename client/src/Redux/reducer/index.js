@@ -1,4 +1,4 @@
-import { FILTER_BY_ACTIVITIES, FILTER_BY_CONTINENT, GET_COUNTRIES, ORDER_BY_NAME, SEARCH_COUNTRIES, ASCENDENTE, POST_ACTIVITIES, GET_ACTIVITIES, ORDER_BY_POPULATION, HIGHER_POPULATION, DETAIL, RESET } from '../Const/Const.js'
+import { FILTER_BY_ACTIVITIES, FILTER_BY_CONTINENT, GET_COUNTRIES, ORDER_BY_NAME, SEARCH_COUNTRIES, ASCENDENTE, POST_ACTIVITIES, GET_ACTIVITIES, ORDER_BY_POPULATION, HIGHER_POPULATION, DETAIL, RESET, CLEAR_COUNTRIES} from '../Const/Const.js'
 
 const initialState = {
     countries: [],
@@ -68,9 +68,15 @@ export default function rootReducer(state = initialState, action) {
                 detail: []
             }
 
+        case CLEAR_COUNTRIES:
+            return {
+                ...state,
+                countries:[]
+
+            }
+
         case SEARCH_COUNTRIES:
-            // const errorName = [{ id: 1, error: "El pais no existe" }]
-            // const verificacionName = action.payload.length !== 0 ? action.payload : errorName
+            
             return {
                 ...state,
                 countries: action.payload
@@ -100,6 +106,8 @@ export default function rootReducer(state = initialState, action) {
                 ...state,
                 countries: orderCountriesByName
             }
+
+
 
         case ORDER_BY_POPULATION:
             let orderCountriesByPopulation = action.payload === HIGHER_POPULATION ? state.countries.sort((a, b) => {

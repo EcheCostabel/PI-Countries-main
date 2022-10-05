@@ -4,13 +4,14 @@ const { Country, Activity } = require('../db.js');
 const { getallActivity } = require('../controlApp/getCountries.js')
 
 router.post('/', async function (req, res) {
-    const { name, difficulty, duration, season, countryId } = req.body
+    const { name, difficulty, duration, season, countryId, precio} = req.body
     const createActivity = await Activity.create({
         idPaises: countryId,
         name: name,
         difficulty: difficulty,
         duration: duration,
         season: season,
+        precio: precio,
     })
     const pais = await Country.findAll({
         where: {
@@ -22,10 +23,14 @@ router.post('/', async function (req, res) {
 
 })
 
+
 router.get('/', async (req, res) => {
     const activity = await getallActivity()
     res.status(200).send(activity)
 })
+
+
+
 
 
 module.exports = router;

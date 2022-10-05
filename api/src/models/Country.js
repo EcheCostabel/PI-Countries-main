@@ -11,6 +11,9 @@ module.exports = (sequelize) => {
       primaryKey: true,
       allowNull: false
     },
+    precio:{
+      type: DataTypes.STRING
+    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,

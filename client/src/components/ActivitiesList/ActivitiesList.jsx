@@ -12,7 +12,7 @@ export default function ActivitiesList() {
 
   useEffect(() => {
     dispatch(getActivities())
-  })
+  },[dispatch])
 
   return (
     <div className="activityListContainer">
@@ -32,6 +32,7 @@ export default function ActivitiesList() {
                 duration={acc.duration}
                 season={acc.season}
                 difficulty={acc.difficulty}
+            
               />
             </div> 
             

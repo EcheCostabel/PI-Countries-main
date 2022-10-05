@@ -1,11 +1,11 @@
 import axios from 'axios';
-import { RESET, ORDER_BY_POPULATION, FILTER_BY_ACTIVITIES, FILTER_BY_CONTINENT, GET_COUNTRIES, ORDER_BY_NAME, SEARCH_COUNTRIES, GET_ACTIVITIES, POST_ACTIVITIES, DETAIL } from '../Const/Const.js'
+import { RESET, ORDER_BY_POPULATION, FILTER_BY_ACTIVITIES, FILTER_BY_CONTINENT, GET_COUNTRIES, ORDER_BY_NAME, SEARCH_COUNTRIES, GET_ACTIVITIES, POST_ACTIVITIES, DETAIL, CLEAR_COUNTRIES } from '../Const/Const.js'
 
 
 export function getCountries() {
     return async function (dispatch) {
 
-        axios.get('http://localhost:3001/countries')
+        axios.get('/countries')
         .then(function (response) {
             return dispatch({
                 type: GET_COUNTRIES,
@@ -19,7 +19,7 @@ export function getCountries() {
 export function searchCountries(search) {
     return async function (dispatch) {
 
-        axios.get('http://localhost:3001/countries?name=' + search)
+        axios.get('/countries?name=' + search)
         .then(function (response) {
             return dispatch({
                 type: SEARCH_COUNTRIES,
@@ -37,6 +37,7 @@ export function filterCountriesByContinent(payload) {
     }
 }
 
+
 export function filterCountriesByActivity(payload) {
     return {
         type: FILTER_BY_ACTIVITIES,
@@ -51,6 +52,8 @@ export function orderByName(payload) {
     }
 }
 
+
+
 export function orderByPopulation(payload) {
     return {
         type: ORDER_BY_POPULATION,
@@ -61,7 +64,7 @@ export function orderByPopulation(payload) {
 export function getActivities() {
     return async function (dispatch) {
         try {
-            let json = await axios.get('http://localhost:3001/activity');
+            let json = await axios.get('/activity');
             return dispatch({
                 type: GET_ACTIVITIES,
                 payload: json.data
@@ -74,7 +77,7 @@ export function getActivities() {
 
 export function postActivities(payload) {
     return async function (dispatch) {
-        await axios.post('http://localhost:3001/activity', payload);
+        await axios.post('/activity', payload);
         return dispatch({
             type: POST_ACTIVITIES,
         })
@@ -84,7 +87,7 @@ export function postActivities(payload) {
 export function getDetail(id) {
     return async function (dispatch) {
         try {
-            let json = await axios.get('http://localhost:3001/countries/' + id);
+            let json = await axios.get('/countries/' + id);
             return dispatch({
                 type: DETAIL,
                 payload: json.data
@@ -98,5 +101,11 @@ export function getDetail(id) {
 export function restartDetail() {
     return (dispatch) => {
         dispatch({ type: RESET })
+    }
+}
+
+export function clearCountries() {
+    return (dispatch) => {
+        dispatch({type: CLEAR_COUNTRIES})
     }
 }

@@ -8,6 +8,8 @@ export default function Activity({ name, duration, season, difficulty }) {
       <h3 className='h3Activity'>Duracion: {duration}</h3>
       <h3 className='h3Activity'>Temporada: {season}</h3>
       <h3 className='h3Activity'>Dificultad: {difficulty}</h3>
+     
+      
     </div>
   );
 }
