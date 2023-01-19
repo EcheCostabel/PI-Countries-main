@@ -12,6 +12,7 @@ export default function SearchBar() {
     function onSubmit(e) {
 
         let filter = countries.filter((c) => c.name.includes(search))
+       
 
         e.preventDefault();
         if (!search.length) {
